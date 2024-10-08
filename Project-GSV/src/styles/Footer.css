@@ -1,0 +1,193 @@
+footer {
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  background: linear-gradient(to right, #00093c, #2d0b00);
+  color: #fff;
+  padding: 100px 0 30px;
+  border-top-left-radius: 125px;
+  font-size: 13px;
+  line-height: 20px;
+}
+
+footer * {
+  -webkit-tap-highlight-color: transparent;
+}
+
+.row {
+  width: 85%;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.col {
+  flex-basis: 25%;
+  padding: 10px;
+}
+
+.col:nth-child(2), .col:nth-child(3){
+  flex-basis: 15%;
+}
+
+.logo {
+  margin-bottom: 30px;
+  font-family: Arimo, sans-serif;
+  font-size: 25px;
+  line-height: 30px;
+  
+}
+
+.col h3 {
+  width: fit-content;
+  margin-bottom: 40px;
+  position: relative;
+}
+
+.col .email-id {
+  width: fit-content;
+  border-bottom: 1px solid #ccc;
+  margin: 20px 0;
+}
+
+.col ul li {
+  list-style: none;
+  margin-bottom: 12px;
+}
+
+.col ul li a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.col ul li a:active {
+  color: #F4D35E;
+}
+
+.col form {
+  padding-bottom: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #ccc;
+  margin-bottom: 50px;
+}
+
+.col form .fa-regular {
+  font-size: 18px;
+  margin-right: 10px;
+}
+
+.col form input {
+  width: 100%;
+  background: transparent;
+  color: #ccc;
+  border: 0;
+  outline: none;
+}
+
+.col form button {
+  background: transparent;
+  border: 0;
+  outline: none;
+  cursor: pointer;
+}
+
+.col form button .fa-solid {
+  font-size: 16px;
+  color: #ccc;
+}
+
+.col .social-icons .fa-brands {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 40px;
+  font-size: 20px;
+  color: #000;
+  background: #fff;
+  margin-right: 15px;
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+
+.col .social-icons .fa-brands:active {
+  background: #F4D35E;
+}
+
+hr {
+  width: 90%;
+  border: 0;
+  border-bottom: 1px solid #ccc;
+  margin: 20px auto;
+}
+
+.copyright {
+  text-align: center;
+}
+
+.dev {
+  margin-top: 10px;
+  color: #808080;
+}
+
+.dev a {
+  text-decoration: none;
+  border-bottom: 1px solid #ccc;
+}
+
+.dev a:active {
+  color: #F4D35E;
+  border-bottom: none;
+}
+
+.col .underline {
+  width: 100%;
+  height: 5px;
+  background: #767676;
+  border-radius: 3px;
+  position: absolute;
+  top: 25px;
+  left: 0;
+  overflow: hidden;
+}
+.col .underline span {
+  width: 15px;
+  height: 100%;
+  background: #fff;
+  border-radius: 3px;
+  position: absolute;
+  top: 0;
+  left: 10px;
+  animation: moving 2s linear infinite;
+}
+
+@keyframes moving {
+  0% {
+    left: -20px;
+  }
+  100% {
+    left: 100%;
+  }
+}
+
+@media (max-width: 700px) {
+  footer {
+    bottom: unset;
+  }
+
+  .col {
+    flex-basis: 100%;
+  }
+  
+  .col:nth-child(2), .col:nth-child(3) {
+    flex-basis: 100%;
+  }
+
+  .col .social-icons .fa-brands {
+    margin-bottom: 0;
+  }
+}
