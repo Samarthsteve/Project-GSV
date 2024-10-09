@@ -3,10 +3,11 @@
   --header-height: 3.5rem;
 
   /*========== Colors ==========*/
-  --nav-primary-color: #68D2E8;
-  --nav-secondary-color: #FDDE55;
-  --nav-tertiary-color: #FEEFAD;;
-  --nav-black: #2d0b00;
+  --nav-primary-color: #E9D8A6;
+  --nav-secondary-color: #CA6702;
+  --nav-tertiary-color: #EE9B00;;
+  --nav-black: #001219;
+  --nav-hover: #0A9396;
 
   /*========== Font and typography ==========*/
   /*.5rem = 8px | 1rem = 16px ...*/
@@ -173,14 +174,17 @@ a {
     height: 100%;
     display: flex;
     column-gap: 3rem;
+    background-color: var(--nav-primary-color);
   }
   .nav__link {
     height: 100%;
     padding: 0;
     justify-content: initial;
     column-gap: .25rem;
+    background-color: var(--nav-primary-color);
   }
   .nav__link:hover {
+    color: var(--nav-hover);
     background-color: transparent;
   }
 }

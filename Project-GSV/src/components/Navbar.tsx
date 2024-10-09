@@ -10,7 +10,7 @@ export default function Navbar(){
          <nav className="nav container">
             <div className="nav__data">
                <a href="#" className="nav__logo">
-                  Gnyana Sudha Vidaylaya
+                  Gnyana Sudha Vidyalaya
                </a>
 
             <div className={`nav__toggle ${isTriggerClicked ? "show-icon" : ""}`} id="nav-toggle" onClick={() => setTrigger(!isTriggerClicked)}>
