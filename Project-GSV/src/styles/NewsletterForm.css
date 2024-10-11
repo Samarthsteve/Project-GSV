@@ -1,0 +1,49 @@
+:root {
+	--pink1: #FFEF12;
+	--pink2: #DC5F89;
+}
+
+.panel-container {
+	/* display: flex; */
+	/* flex-direction: column; */
+	text-align: center;
+	color: #fff;
+	background-image: linear-gradient(to bottom right, var(--pink1), var(--pink2));
+	border-radius: 15px;
+	box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+	padding: 30px;
+	margin: 15px;
+	/* justify-content: center; */
+	/* align-items: center; */
+}
+
+.panel-container h3 {
+	margin-bottom: 30px;
+	letter-spacing: 0.5px;
+}
+
+.panel-container input, .panel-container button {
+	border: none;
+	border-radius: 3px;
+	display: block;
+	font-size: 12px;
+	padding: 7px 10px;
+	margin: 15px 0;
+	width: 100%;
+}
+
+.panel-container button {
+	background-image: linear-gradient(to bottom right, var(--pink1), var(--pink2));
+	border: 1px solid rgba(255, 255, 255, 0.3);
+	color: #fff;
+}
+
+.panel-container small {
+	font-size: 0.75em;
+	line-height: 10px;
+	opacity: 0.5;
+}
+
+.panel-container small:first-of-type {
+	text-transform: uppercase;
+}
