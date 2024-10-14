@@ -1,12 +1,15 @@
 footer {
   width: 100%;
   position: absolute;
-  background: linear-gradient(to left, #001219, #9B2226);
+  background: linear-gradient(to left, #43cea2, #185a9d);
   color: #fff;
   padding: 100px 0 30px;
   border-top-left-radius: 125px;
+  border-top-right-radius: 125px;
   font-size: 13px;
   line-height: 20px;
+  margin-top: 30px;
+  
 }
 
 footer * {

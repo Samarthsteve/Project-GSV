@@ -1,12 +1,15 @@
 import '../styles/Navbar.css';
+import NavbarScript from '../scripts/NavbarScript';
 
 import { useState } from 'react';
 
 export default function Navbar(){
    const [isTriggerClicked, setTrigger] = useState(false);
+
+   NavbarScript();
    
    return (
-      <header className="header">
+      <header id="header" className="header">
          <nav className="nav container">
             <div className="nav__data">
                <a href="#" className="nav__logo">

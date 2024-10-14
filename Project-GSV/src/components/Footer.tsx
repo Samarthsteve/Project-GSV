@@ -40,10 +40,9 @@ export default function Footer() {
         </form>
         
         <div className="social-icons">
-        <i className="fa-brands fa-facebook"></i>
-        <i className="fa-brands fa-instagram"></i>
-        <i className="fa-brands fa-x-twitter"></i>
-        <i className="fa-brands fa-linkedin"></i>
+        <a href="https://www.facebook.com/Gnyana.Sudha.Bidar/"><i className="fa-brands fa-facebook"></i></a>
+        <a href="https://youtube.com/@gsvidyalaya"><i className="fa-brands fa-youtube"></i></a>
+        <a href="https://www.instagram.com/gnyana_sudha_vidyalaya/"><i className="fa-brands fa-instagram"></i></a>
         </div>
       </div>
     </div>

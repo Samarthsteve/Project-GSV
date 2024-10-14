@@ -49,14 +49,14 @@ export default function ContactUs() {
         <div className="flex social__media__box">
         <div className="Facebook outline">
           <i className="fa-brands fa-facebook-f"></i>
-          <a href="">
+          <a href="https://www.facebook.com/Gnyana.Sudha.Bidar/">
             /<span className="bold">Gnyana.Sudha.Bidar</span>
           </a>
         </div>
 
         <div className="Youtube outline">
           <i className="fa-brands fa-youtube"></i>
-          <a href="">
+          <a href="https://youtube.com/@gsvidyalaya">
             @<span className="bold">gsvidyalaya</span>
           </a>
         </div>

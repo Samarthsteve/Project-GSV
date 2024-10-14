@@ -38,6 +38,8 @@ a {
   width: 100%;
   background-color: var(--nav-primary-color);
   box-shadow: 0 2px 16px hsla(220, 32%, 8%, .3);
+  transition: .8s;
+  z-index: 1000;
 }
 
 /*=============== NAV ===============*/
@@ -107,13 +109,13 @@ a {
     width: 0;
   }
   .nav__list {
-    background-color: var(--nav-secondary-color);
+    background-color: var(--nav-primary-color);
   }
 }
 
 .nav__link {
   color: var(--nav-black);
-  background-color: var(--nav-secondary-color);
+  background-color: var(--nav-primary-color);
   font-weight: var(--font-semi-bold);
   padding: 1.25rem 1.5rem;
   display: flex;
