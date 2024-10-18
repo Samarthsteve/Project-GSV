@@ -1,12 +1,11 @@
 import "../styles/ContactUs.css";
 import NewsletterForm from "./NewsletterForm";
+import Hero from "./Hero";
 
 export default function ContactUs() {
   return (
-    <main className="contact-us">
-      <div className="contact__hero">
-        <h1 className="hero__title">Contact Us</h1>
-      </div>
+    <main className="contact-us"> 
+      <Hero heroTitle="Contact Us" heroImg="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSCvjuMC2rSizh1-uDAT0MI7aDymGwvCiQDkvbIJSPV2tI49IPc2ByvmpQ&s=10"/>
 
       <div className="Mailbox">
         <div className="Map">

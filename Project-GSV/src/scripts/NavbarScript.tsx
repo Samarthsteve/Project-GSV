@@ -2,7 +2,6 @@ import { useEffect } from 'react'
 
 function NavbarScript() {
   useEffect(() => {
-    console.log(1)
     let lastScrollTop = 0;
     const navbar = document.getElementById("header");
 

@@ -1,0 +1,40 @@
+.hero {
+  width: 100%;
+  height: clamp(300px, 50vh, 700px);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+.hero::after{
+  content: "";
+  position: absolute;
+  left: 0;
+  top: clamp(300px, 50vh, 700px);
+  background: #AE2012;
+  width: 100%;
+  height: 0.85vh;
+}
+
+.hero__title {
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #FEFAE0;
+  font-family: 'Work Sans', sans-serif;
+  font-size: clamp(1.625rem, 0.7727rem + 4.2614vw, 3.5rem);
+  font-weight: 900;
+}
+
+@media screen and (min-width: 1024px) {
+  .hero {
+    height: 99.15vh;
+  }
+  
+  .hero::after{
+    top: 99.15vh;
+  }
+}
