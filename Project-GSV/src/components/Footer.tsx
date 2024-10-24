@@ -1,4 +1,5 @@
 import '../styles/Footer.css'
+import {Link} from 'react-router-dom'
 
 export default function Footer() {
   return (
@@ -8,7 +9,7 @@ export default function Footer() {
         <h3 className="logo">Gnyana Sudha Vidyalaya</h3>
         <p>Celebrating 20 years of excellence, shaping young minds and empowering future leaders.</p>
       </div>
-      
+
       <div className="col">
         <h3>School Address <div className="underline"><span></span></div></h3>
         <p>Gnyana Sudha Vidyalaya</p>
@@ -17,20 +18,20 @@ export default function Footer() {
         <p className="email-id">gsvidyalaya@gmail.com</p>
         <h4>91+ 94820 50396</h4>
       </div>
-      
+
       <div className="col">
         <h3>Links  <div className="underline"><span></span></div></h3>
         <ul>
-          <li><a href="">Home</a></li>
-          <li><a href="">About School</a></li>
-          <li><a href="">Timeline</a></li>
-          <li><a href="">Events</a></li>
-          <li><a href="">Our Alumini</a></li>
-          <li><a href="">Gallery</a></li>
-          <li><a href="">Contact Us</a></li>
+          <li><Link to="/">Home</Link></li>
+          <li><Link to="/about">About School</Link></li>
+          <li><Link to="/timeline">Timeline</Link></li>
+          {/* <li><Link to="">Events</Link></li> */}
+          <li><Link to="/alumni">Our Alumni</Link></li>
+          <li><Link to="/gallery">Gallery</Link></li>
+          <li><Link to="/contact">Contact Us</Link></li>
         </ul>
       </div>
-      
+
       <div className="col">
         <h3>Newsletter  <div className="underline"><span></span></div></h3>
         <form>
@@ -38,7 +39,7 @@ export default function Footer() {
           <input type="email" placeholder="Enter your email" required/>
           <button type="submit"><i className="fa-solid fa-arrow-right"></i></button>
         </form>
-        
+
         <div className="social-icons">
         <a href="https://www.facebook.com/Gnyana.Sudha.Bidar/"><i className="fa-brands fa-facebook"></i></a>
         <a href="https://youtube.com/@gsvidyalaya"><i className="fa-brands fa-youtube"></i></a>

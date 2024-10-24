@@ -106,8 +106,6 @@ function Gallery() {
     }
   ];
 
-
-
   GalleryScript();
   
    return (

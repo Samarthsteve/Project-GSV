@@ -1,5 +1,6 @@
 import '../styles/Navbar.css';
 import NavbarScript from '../scripts/NavbarScript';
+import { NavLink } from 'react-router-dom';
 
 import { useState } from 'react';
 
@@ -12,9 +13,9 @@ export default function Navbar(){
       <header id="header" className="header">
          <nav className="nav container">
             <div className="nav__data">
-               <a href="#" className="nav__logo">
+               <NavLink to="/" className="nav__logo">
                   Gnyana Sudha Vidyalaya
-               </a>
+               </NavLink>
 
             <div className={`nav__toggle ${isTriggerClicked ? "show-icon" : ""}`} id="nav-toggle" onClick={() => setTrigger(!isTriggerClicked)}>
                   <i className="ri-menu-line nav__burger"></i>
@@ -25,45 +26,45 @@ export default function Navbar(){
             <div className={`nav__menu ${isTriggerClicked ? "show-menu" : ""}`} id="nav-menu">
                <ul className="nav__list">
                   <li>
-                     <a href="#" className="nav__link">
+                     <NavLink to="/" className="nav__link">
                         Home
-                     </a>
+                     </NavLink>
                   </li>
 
                   <li>
-                     <a href="#" className="nav__link">
+                     <NavLink to="/about" className="nav__link">
                         About Us
-                     </a>
+                     </NavLink>
                   </li>
 
                   <li>
-                     <a href="#" className="nav__link">
+                     <NavLink to="/timeline" className="nav__link">
                         Timeline
-                     </a>
+                     </NavLink>
                   </li>
 
                   <li>
-                     <a href="#" className="nav__link">
-                        Our Alumini
-                     </a>
+                     <NavLink to="/alumni" className="nav__link">
+                        Our Alumni
+                     </NavLink>
                   </li>
 
-                  <li>
-                     <a href="#" className="nav__link">
+                  {/* <li>
+                     <NavLink to="" className="nav__link">
                         Events
-                     </a>
-                  </li>
+                     </NavLink>
+                  </li> */}
 
                   <li>
-                     <a href="#" className="nav__link">
+                     <NavLink to="/gallery" className="nav__link">
                         Gallery
-                     </a>
+                     </NavLink>
                   </li>
 
                   <li>
-                     <a href="#" className="nav__link">
+                     <NavLink to="/contact" className="nav__link">
                         Contact Us
-                     </a>
+                     </NavLink>
                   </li>
                </ul>
             </div>

@@ -13,7 +13,7 @@ function GalleryScript() {
 
 		var value = $(this).attr('data-filter');
 		$galleryContainer.isotope({
-			filter: value 
+			filter: value
 		})
 	})
   }, []);
