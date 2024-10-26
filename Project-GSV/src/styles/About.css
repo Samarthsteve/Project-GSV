@@ -1,0 +1,126 @@
+.About div {
+  margin-bottom: calc(1.5rem + 0.8vw);
+}
+
+.About .description{
+  color: #616161;
+}
+
+.about__intro .description {
+  text-align: left;
+}
+
+.br {
+  display: block;
+  margin-bottom: calc(1.5rem + 0.7vw);
+}
+
+.about-img {
+  text-align: center;
+  padding-right: 18px;
+}
+
+.about-img img {
+  margin: 1.4rem 0;
+  width: 80vw;
+  box-shadow: 16px 16px 0px 0px #9B2226;
+}
+
+.about__cards {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  text-align: center;
+}
+
+.card {
+  position: relative;
+  color: #5a5a5a;
+  width: 350px;
+  background: #f0f0f0;
+  margin: 30px 15px;
+  padding: 28px 15px;
+  border-radius: 9px;
+  box-shadow: 0 0 80px 0 #adadad;
+}
+
+.card h2 {
+  text-transform: capitalize;
+  letter-spacing: 1px;
+  text-align: center;
+  font-size: 1.5rem;
+  font-family: 'Work Sans', sans-serif;
+}
+
+.card p {
+  margin-top: 22px;
+  padding: 0 8px;
+  font-size: 0.95rem;
+  opacity: 0.8;
+  line-height: 1.7rem;
+}
+
+.wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  text-align: center;
+}
+
+.team .profile {
+  margin: 30px 15px;
+}
+
+.team .profile img {
+  width: 275px;
+  height: 275px;
+  border-radius: 100%;
+}
+
+.team .profile p {
+  margin-top: 16px;
+  padding: 0 24px;
+  color: #5a5a5a;
+}
+
+.team .profile .name {
+  font-size: 1.4rem;
+}
+
+.team .profile .designation {
+  font-size: 1rem;
+  font-weight: 500;
+  margin-top: 12px;
+}
+
+.song p {
+  max-width: 800px;    /* Limit width for larger screens */
+    margin: 0 auto;      /* Center the text block */
+  margin-bottom: calc(1.5rem + 0.7vw);
+    padding: 20px 40px;  /* Add padding around the text */
+    font-size: 1.2rem;   /* Responsive font size */
+    line-height: 2.2rem;    /* Comfortable line height */
+    text-align: center;  /* Center-align text */
+    font-weight: 400;    /* Medium weight */
+    color: #333;         /* Text color */
+}
+
+@media screen and (max-width: 768px) {
+  .about-img img {
+    width: 70vw;
+    box-shadow: 22px 22px 0px 0px #9B2226;
+  }
+  .song p {
+        font-size: 1rem;   /* Slightly smaller font for mobile */
+        padding: 10px 20px; /* Reduce padding */
+    }
+}
+
+@media screen and (min-width: 1024px) {
+  .about-img img {
+    width: 60vw;
+    box-shadow: 25px 25px 0px 0px #9B2226;
+  }
+}

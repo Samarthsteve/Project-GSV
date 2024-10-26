@@ -9,6 +9,7 @@ import Error from './components/Error'
 import Alumni from './components/Alumni'
 import Gallery from './components/Gallery'
 import ContactUs from './components/ContactUs'
+import About from './components/About'
 import App from './App.tsx'
 
 var router = createBrowserRouter([
@@ -25,6 +26,7 @@ var router = createBrowserRouter([
       },
       {
         path: "/about",
+        element: <About />,
       },
       {
         path: "/alumni",

@@ -26,6 +26,7 @@ body {
 }
 
 .heading {
+  padding: 0 10px;
   position: relative;
   color: #001219;
   font-family: 'Work Sans', sans-serif;
@@ -52,17 +53,19 @@ body {
 }
 
 /* Style for the description text */
+
 .description {
     max-width: 800px;    /* Limit width for larger screens */
     margin: 0 auto;      /* Center the text block */
   margin-bottom: calc(1.5rem + 0.7vw);
     padding: 20px 40px;  /* Add padding around the text */
     font-size: 1.2rem;   /* Responsive font size */
-    line-height: 1.6;    /* Comfortable line height */
+    line-height: 2rem;    /* Comfortable line height */
     text-align: center;  /* Center-align text */
     font-weight: 400;    /* Medium weight */
     color: #333;         /* Text color */
 }
+
 
 /*=============== VARIABLES CSS ===============*/
 

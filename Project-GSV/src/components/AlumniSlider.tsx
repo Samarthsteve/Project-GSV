@@ -1,5 +1,6 @@
 import "../styles/AlumniSlider.css";
 import AlumniSliderScript from "../scripts/AlumniSliderScript";
+import { Link } from 'react-router-dom';
 
 function AlumniSlider() {
     AlumniSliderScript();
@@ -35,7 +36,7 @@ function AlumniSlider() {
             <li></li>
         </ul>
     </div>
-       <button className="button-85" role="button">View more</button>
+       <Link to="/gallery"><button to="/gallery" className="button-85" role="button">View more</button></Link>
        </>
    );
 }

@@ -124,6 +124,10 @@ a {
   transition: background-color .3s;
 }
 
+.nav__link.active {
+  color: #b90e0e;
+}
+
 .nav__link:hover {
   background-color: var(--nav-tertiary-color);
 }
