@@ -2,7 +2,7 @@ import {useEffect} from "react";
 
 function GalleryScript() {
   useEffect(() => {
-    var $galleryContainer = $('.gallery').isotope({
+    const $galleryContainer = ($('.gallery') as HTMLElement).isotope({
 		itemSelector: '.item',
   	layoutMode: 'masonry'
 	})
@@ -11,7 +11,7 @@ function GalleryScript() {
 		$('.button-group .button').removeClass('active');
 		$(this).addClass('active');
 
-		var value = $(this).attr('data-filter');
+		const value = $(this).attr('data-filter');
 		$galleryContainer.isotope({
 			filter: value
 		})

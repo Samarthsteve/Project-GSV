@@ -10,7 +10,7 @@
   text-align: left;
 }
 
-.br {
+.About .br {
   display: block;
   margin-bottom: calc(1.5rem + 0.7vw);
 }
@@ -34,7 +34,7 @@
   text-align: center;
 }
 
-.card {
+.about__cards .card {
   position: relative;
   color: #5a5a5a;
   width: 350px;
@@ -45,7 +45,7 @@
   box-shadow: 0 0 80px 0 #adadad;
 }
 
-.card h2 {
+.About .card h2 {
   text-transform: capitalize;
   letter-spacing: 1px;
   text-align: center;
@@ -53,7 +53,7 @@
   font-family: 'Work Sans', sans-serif;
 }
 
-.card p {
+.About .card p {
   margin-top: 22px;
   padding: 0 8px;
   font-size: 0.95rem;
@@ -61,7 +61,7 @@
   line-height: 1.7rem;
 }
 
-.wrapper {
+.About .wrapper {
   width: 100%;
   display: flex;
   justify-content: space-around;
@@ -69,27 +69,27 @@
   text-align: center;
 }
 
-.team .profile {
+.About .team .profile {
   margin: 30px 15px;
 }
 
-.team .profile img {
+.About .team .profile img {
   width: 275px;
   height: 275px;
   border-radius: 100%;
 }
 
-.team .profile p {
+.About .team .profile p {
   margin-top: 16px;
   padding: 0 24px;
   color: #5a5a5a;
 }
 
-.team .profile .name {
+.About .team .profile .name {
   font-size: 1.4rem;
 }
 
-.team .profile .designation {
+.About .team .profile .designation {
   font-size: 1rem;
   font-weight: 500;
   margin-top: 12px;

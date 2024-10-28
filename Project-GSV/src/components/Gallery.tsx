@@ -3,7 +3,7 @@ import Hero from "./Hero";
 import GalleryScript from "../scripts/GalleryScript";
 
 function Gallery() {
-  var images = [
+  const images = [
     {
       type: "alumni",
       title: "Alumni Gathering",

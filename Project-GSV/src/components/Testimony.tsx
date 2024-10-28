@@ -1,7 +1,7 @@
 import "../styles/Testimony.css";
 
 function Testimony() {
-  var testimonyList = [
+  const testimonyList = [
     {
       name: "John Doe",
       message: "I'm grateful for the opportunity to be a part of your alumni network. Your dedication to your school and your commitment to excellence have been invaluable. I'm excited to continue making a positive impact in my community.",

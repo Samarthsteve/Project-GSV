@@ -25,7 +25,7 @@ export default function Footer() {
           <li><Link to="/">Home</Link></li>
           <li><Link to="/about">About School</Link></li>
           <li><Link to="/timeline">Timeline</Link></li>
-          {/* <li><Link to="">Events</Link></li> */}
+          <li><Link to="/academics">Academics</Link></li>
           <li><Link to="/alumni">Our Alumni</Link></li>
           <li><Link to="/gallery">Gallery</Link></li>
           <li><Link to="/contact">Contact Us</Link></li>

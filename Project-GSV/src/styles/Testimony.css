@@ -1,4 +1,5 @@
-.wrapper {
+
+.alumni__testimonies .wrapper {
   width: 100%;
   display: flex;
   justify-content: center;
@@ -6,7 +7,7 @@
   text-align: center;
 }
 
-.wrapper .container {
+.alumni__testimonies .wrapper .container {
   position: relative;
   width: 350px;
   color: #fff;
@@ -17,7 +18,7 @@
   transition: .3s ease;
 }
 
-.wrapper .container .profile {
+.alumni__testimonies .wrapper .container .profile {
   position: absolute;
   left: 50%;
   top: -10%;
@@ -27,7 +28,7 @@
   
 }
 
-.wrapper .container .profile .imgBox {
+.alumni__testimonies .wrapper .container .profile .imgBox {
   position: relative;
   width: 100px;
   height: 100px;
@@ -37,7 +38,7 @@
   border: 8px solid #070c0d;
 }
 
-.wrapper .container .profile .imgBox img {
+.alumni__testimonies .wrapper .container .profile .imgBox img {
   position: absolute;
   top: 0;
   left: 0;
@@ -48,12 +49,12 @@
   object-fit: cover;
 }
 
-.wrapper .container .profile .imgBox:hover img {
+.alumni__testimonies .wrapper .container .profile .imgBox:hover img {
   filter: saturate(140%);
   transform: scale(0.95);
 }
 
-.wrapper .container .profile h2 {
+.alumni__testimonies .wrapper .container .profile h2 {
   padding: 5px 0;
   text-transform: capitalize;
   color: #fff;
@@ -61,7 +62,7 @@
   text-align: center;
 }
 
-.wrapper .container p {
+.alumni__testimonies .wrapper .container p {
   margin-top: 50px;
   color: #fff;
   padding: 0 8px;
@@ -69,14 +70,14 @@
   opacity: 0.8;
 }
 
-.wrapper .container .left {
+.alumni__testimonies .wrapper .container .left {
   font-size: 30px;
   display: block;
   text-align: left;
   color: #3b7cf5;
 }
 
-.wrapper .container .right {
+.alumni__testimonies .wrapper .container .right {
   font-size: 30px;
   display: block;
   text-align: right;

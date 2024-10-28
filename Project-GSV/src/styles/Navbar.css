@@ -14,13 +14,13 @@
   --Nav-font: "Montserrat", sans-serif;
 }
 
-ul {
+nav ul {
   list-style: none;
   /* Color highlighting when pressed on mobile devices */
   -webkit-tap-highlight-color: transparent;
 }
 
-a {
+nav a {
   text-decoration: none;
 }
 

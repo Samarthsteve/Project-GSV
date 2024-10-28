@@ -2,7 +2,7 @@ import "../styles/About.css"
 import Hero from './Hero'
 
 function About() {
-  var cards = [
+  const cards = [
     {
       title: "Our Vision",
       description: "At Gnyana Sudha Vidyalaya, our mission is to provide a nurturing and inclusive learning environment where students are empowered to achieve academic excellence, embrace diversity, and make meaningful contributions to society. We are committed to foster a culture of lifelong learning, personal growth, and social responsibility among our students, preparing them to thrive in a dynamic and interconnected world."
@@ -16,7 +16,7 @@ function About() {
       description: "Gnyana Sudha Vidyalaya, excellence is our standard, integrity our cornerstone, and inclusivity our hallmark. Through these core values, we inspire a community committed to academic excellence, personal growth, and positive societal impact, shaping individuals who embody the spirit of excellence, integrity, inclusivity, empowerment, collaboration, resilience, and service in all endeavors"
     },
     ];
-  var profiles = [
+  const profiles = [
     {
       name: "Dr. Poornima George",
       designation: "President | Gnyana Sudha Education Society",

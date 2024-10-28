@@ -7,7 +7,7 @@ import { useState } from 'react';
 export default function Navbar(){
    const [isTriggerClicked, setTrigger] = useState(false);
 
-   NavbarScript();
+   NavbarScript(setTrigger);
    
    return (
       <header id="header" className="header">
@@ -40,6 +40,12 @@ export default function Navbar(){
                   <li>
                      <NavLink to="/timeline" className="nav__link">
                         Timeline
+                     </NavLink>
+                  </li>
+                  
+                  <li>
+                     <NavLink to="/academics" className="nav__link">
+                        Academics
                      </NavLink>
                   </li>
 
