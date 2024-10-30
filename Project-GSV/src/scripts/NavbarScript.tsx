@@ -21,7 +21,7 @@ function NavbarScript(setTrigger) {
     return () => {
       window.removeEventListener("scroll", handleScroll); // cleanup on component unmount
     };
-  }, []);
+  }, [setTrigger]);
 
   return null;
 }

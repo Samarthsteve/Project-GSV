@@ -4,13 +4,18 @@ import {
 } from 'react-router-dom'
 
 interface FooterProps {
-  borderRadius: string;
+  borderRadius: string,
+  margin: string,
+  footerLine: boolean;
 }
 
-
-export default function Footer({ borderRadius }: FooterProps) {
+export default function Footer({
+  borderRadius,
+  margin,
+  footerLine
+}: FooterProps) {
   return (
-    <footer style={{ borderRadius}}>
+    <footer style={ { borderRadius, margin }} className={footerLine ? "active": ""}>
       <div className="row">
         <div className="col">
           <h3 className="logo">Gnyana Sudha Vidyalaya</h3>

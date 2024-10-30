@@ -14,13 +14,21 @@ import "./App.css"
 function App() {
   const [footerBorderRadius,
     setFooterBorderRadius] = useState < string > ('125px 125px 0 0');
+  const [footerMargin,
+    setFooterMargin] = useState < string > ('30px 0 0 0');
+  const [footerLine,
+    setFooterLine] = useState < boolean > (false);
   const location = useLocation();
 
   useEffect(() => {
     if (location.pathname === '/timeline') {
-      setFooterBorderRadius('0'); // Flat for the timeline page
+      setFooterBorderRadius('0'); // Flat for the timeline and pages
+      setFooterMargin('0');
+      setFooterLine(true);
     } else {
       setFooterBorderRadius('125px 125px 0 0'); // Rounded for other pages
+      setFooterMargin('30px 0 0 0');
+      setFooterLine(false);
     }
   },
     [location.pathname]);
@@ -29,7 +37,7 @@ function App() {
     <div>
       <Navbar />
       <Outlet />
-      <Footer borderRadius={footerBorderRadius} />
+      <Footer borderRadius={ footerBorderRadius } margin={ footerMargin } footerLine={ footerLine } />
       <ScrollRestoration />
     </div>
   );

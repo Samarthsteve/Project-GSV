@@ -9,7 +9,6 @@ footer {
   font-size: 13px;
   line-height: 20px;
   margin-top: 30px;
-  
 }
 
 footer * {
@@ -30,7 +29,7 @@ footer * {
   padding: 10px;
 }
 
-.col:nth-child(2), .col:nth-child(3){
+.col:nth-child(2), .col:nth-child(3) {
   flex-basis: 15%;
 }
 
@@ -39,7 +38,7 @@ footer * {
   font-family: Arimo, sans-serif;
   font-size: 25px;
   line-height: 30px;
-  
+
 }
 
 .col h3 {
@@ -184,7 +183,7 @@ footer hr {
   .col {
     flex-basis: 100%;
   }
-  
+
   .col:nth-child(2), .col:nth-child(3) {
     flex-basis: 100%;
   }
