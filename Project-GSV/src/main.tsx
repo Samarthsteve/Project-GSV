@@ -11,6 +11,7 @@ import Academics from "./components/Academics"
 import Gallery from './components/Gallery'
 import ContactUs from './components/ContactUs'
 import About from './components/About'
+import Timeline from "./components/Timeline"
 import App from './App.tsx'
 
 const router = createBrowserRouter([
@@ -24,6 +25,7 @@ const router = createBrowserRouter([
       },
       {
         path: "/timeline",
+        element: <Timeline />,
       },
       {
         path: "/about",

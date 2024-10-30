@@ -43,7 +43,6 @@
 }
 
 .contact__details i{
-  color: #9B2226;
   font-size: clamp(1.375rem, 1.1477rem + 1.1364vw, 1.875rem);
   position: relative;
   margin-bottom: .6em;
@@ -57,7 +56,7 @@
   transform: translateX(-50%) translateY(50%);
   width: clamp(4.375rem, 3.5227rem + 4.2614vw, 6.25rem);
   height: clamp(4.375rem, 3.5227rem + 4.2614vw, 6.25rem);
-  background: #94D2BD;
+  background: #e5fde3;
   border-radius: 100px;
   z-index: -1;
   border: 1.6px solid #001219;
@@ -67,10 +66,9 @@
   font-size: clamp(0.75rem, 0.4659rem + 1.4205vw, 1.375rem);
   font-family: 'Montserrat', sans-serif;
   padding: clamp(1.875rem, 1.4773rem + 1.9886vw, 2.75rem) 0;
-  background: radial-gradient(circle, rgba(187,62,3,1) 30%, rgba(148,210,189,1) 100%);
-  color: #E9D8A6;
+  background: radial-gradient(circle, #b3dcfa 25%, #e3f2fd 92%);
   border-radius: 18px;
-  box-shadow: 0 0 16px 7px #94D2BD inset;
+  box-shadow: 0 0 12px 10px #e3f2fd inset;
 }
 
 .social__media {
@@ -120,7 +118,7 @@
 }
 
 .Youtube {
-  background: linear-gradient(to right,  #e52d27,#b31217);
+  background: linear-gradient(to right,  #e52d27,#ff0000);
 }
 
 .social__media__box div:hover{

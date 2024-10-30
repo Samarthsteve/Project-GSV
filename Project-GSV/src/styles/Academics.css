@@ -26,9 +26,10 @@
 }
 
 .feature i {
-  font-size: clamp(1.375rem, 1.1477rem + 1.1364vw, 1.875rem);
+  font-size: 3rem;
   position: relative;
-  margin-bottom: .6em;
+  margin-bottom: .4em;
+  color: #001219;
 }
 
 .feature h2 {
@@ -37,6 +38,7 @@
   text-align: center;
   font-size: 1.5rem;
   font-family: 'Montserrat', sans-serif;
+  color: #001219;
 }
 
 .feature p {
