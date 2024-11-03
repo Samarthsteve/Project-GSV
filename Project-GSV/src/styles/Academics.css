@@ -7,7 +7,7 @@
   text-align: center;
 }
 
-.features {
+.academics .features {
   width: 100%;
   display: flex;
   justify-content: center;
@@ -15,7 +15,7 @@
   text-align: center;
 }
 
-.feature {
+.academics .feature {
   position: relative;
   color: #5a5a5a;
   width: 300px;
@@ -23,16 +23,22 @@
   margin: 6px 15px;
   padding: 28px 15px;
   border-radius: 9px;
+  opacity: 0;
+  transition: opacity 1.2s ease;
 }
 
-.feature i {
+.academics .feature-transition {
+  opacity: 1;
+}
+
+.academics .feature i {
   font-size: 3rem;
   position: relative;
   margin-bottom: .4em;
   color: #001219;
 }
 
-.feature h2 {
+.academics .feature h2 {
   text-transform: capitalize;
   letter-spacing: 1px;
   text-align: center;
@@ -41,7 +47,7 @@
   color: #001219;
 }
 
-.feature p {
+.academics .feature p {
   margin-top: 18px;
   padding: 0 12px;
   font-size: 0.98rem;

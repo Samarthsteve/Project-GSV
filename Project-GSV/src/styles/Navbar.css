@@ -40,6 +40,7 @@ nav a {
   box-shadow: 0 2px 16px hsla(220, 32%, 8%, .3);
   transition: .8s;
   z-index: 1000;
+  display: none;
 }
 
 /*=============== NAV ===============*/

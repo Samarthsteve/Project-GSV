@@ -1,0 +1,229 @@
+.Home .intro-text {
+  position: relative;
+  padding-top: 2rem;
+}
+
+.Home .intro-text::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  background: #AE2012;
+  width: 100%;
+  height: 0.85vh;
+}
+
+.Home .intro-text .description {
+  text-align: left;
+}
+
+.vicennial img {
+  width: 100vw;
+  margin-bottom: 1.5rem;
+}
+
+.Home .description {
+  margin-top: -1rem;
+}
+
+.Home .button-85 {
+  transform: translate(-50%, -40%);
+}
+
+.Home .parent-testimonials .heading {
+  margin-bottom: 1.6rem;
+}
+
+.Home .Testimony .wrapper .container {
+  color: #001219;
+  background: #f0f0f0;
+  margin: 20px 10px;
+}
+
+.Home .Testimony .wrapper .container .profile .imgBox {
+  border: 8px solid #FFFCF2;
+}
+
+.Home .Testimony .wrapper .container .profile h2, .Home .Testimony .wrapper .container p {
+  color: #001219;
+}
+
+.chamber-text .wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  text-align: center;
+}
+
+.chamber-text .profile {
+  margin: 20px 15px;
+}
+
+.chamber-text .profile img {
+  width: 200px;
+  height: 200px;
+  border-radius: 100%;
+}
+
+.chamber-text .profile p {
+  margin-top: 12px;
+  padding: 0 24px;
+  color: #5a5a5a;
+}
+
+.chamber-text .profile .name {
+  font-size: 1.4rem;
+}
+
+.chamber-text .profile .designation {
+  font-size: 1rem;
+  font-weight: 500;
+  margin-top: 8px;
+}
+
+.chamber-text .profile .talk {
+  color: #001219;
+  max-width: 435px;
+  /* Limit width for larger screens */
+  margin: 0 auto;
+  /* Center the text block */
+  padding: 20px 40px;
+  /* Add padding around the text */
+  font-size: 1.1rem;
+  /* Responsive font size */
+  line-height: 1.5rem;
+  /* Comfortable line height */
+  text-align: center;
+  /* Center-align text */
+  font-weight: 400;
+  /* Medium weight */
+  font-family: "Arimo", sans-serif;
+}
+
+.talk .left {
+  font-size: 30px;
+  display: block;
+  text-align: left;
+  color: #3b7cf5;
+}
+
+.talk .right {
+  font-size: 30px;
+  display: block;
+  text-align: right;
+  color: #3b7cf5;
+}
+
+@media (min-width: 768px) {
+  .vicennial {
+    text-align: center;
+  }
+
+  .vicennial img {
+    height: 80vh;
+    width: auto;
+    overflow: hidden;
+  }
+
+  .Home .button-85 {
+    left: 0;
+    transform: translate(0%, -40%);
+  }
+}
+
+
+.Enquiry {
+  display: grid;
+  place-items: center;
+  text-align: center;
+}
+.Enquiry .content {
+  width: 80%;
+  padding: 40px 30px;
+  background: #dde1e7;
+  border-radius: 10px;
+  box-shadow: -3px -3px 7px #ffffff73,
+  2px 2px 5px rgba(94,104,121,0.288);
+}
+.Enquiry .content .text {
+  font-size: 1.7rem;
+  font-weight: 600;
+  margin-bottom: 35px;
+  color: #595959;
+}
+.Enquiry .field {
+  height: 50px;
+  width: 100%;
+  display: flex;
+  position: relative;
+}
+.Enquiry .field:nth-child(2) {
+  margin-top: 20px;
+}
+.Enquiry .field input {
+  height: 100%;
+  width: 100%;
+  padding-left: 45px;
+  outline: none;
+  border: none;
+  font-size: 18px;
+  background: #dde1e7;
+  color: #595959;
+  border-radius: 25px;
+  box-shadow: inset 2px 2px 5px #BABECC,
+  inset -5px -5px 10px #ffffff73;
+}
+.Enquiry .field input:focus {
+  box-shadow: inset 1px 1px 2px #BABECC,
+  inset -1px -1px 2px #ffffff73;
+}
+.Enquiry .field span {
+  position: absolute;
+  color: #595959;
+  width: 50px;
+  line-height: 50px;
+}
+.Enquiry .field label {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 45px;
+  pointer-events: none;
+  color: #666666;
+}
+.Enquiry .field input:valid ~ label {
+  opacity: 0;
+}
+
+.Enquiry button {
+  margin: 15px 0;
+  width: 100%;
+  height: 50px;
+  font-size: 18px;
+  line-height: 50px;
+  font-weight: 600;
+  background: #dde1e7;
+  border-radius: 25px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  color: #595959;
+  box-shadow: 2px 2px 5px #BABECC,
+  -5px -5px 10px #ffffff73;
+}
+.Enquiry button:focus {
+  color: #3498db;
+  box-shadow: inset 2px 2px 5px #BABECC,
+  inset -5px -5px 10px #ffffff73;
+}
+
+
+@media (max-width: 768px) {
+  .chamber-text .profile .talk {
+    font-size: 0.9rem;
+    /* Slightly smaller font for mobile */
+    padding: 10px 20px;
+    /* Reduce padding */
+  }
+}

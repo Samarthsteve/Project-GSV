@@ -1,5 +1,9 @@
-import { StrictMode } from 'react'
-import { createRoot } from 'react-dom/client'
+import {
+  StrictMode
+} from 'react'
+import {
+  createRoot
+} from 'react-dom/client'
 import {
   createBrowserRouter,
   RouterProvider,
@@ -12,47 +16,47 @@ import Gallery from './components/Gallery'
 import ContactUs from './components/ContactUs'
 import About from './components/About'
 import Timeline from "./components/Timeline"
+import Home from "./components/Home"
 import App from './App.tsx'
 
-const router = createBrowserRouter([
-  {
-    path: "/",
-    element: <App />,
-    errorElement: <Error />,
-    children: [
-      {
-        index: true,
-      },
-      {
-        path: "/timeline",
-        element: <Timeline />,
-      },
-      {
-        path: "/about",
-        element: <About />,
-      },
-      {
-        path: "/alumni",
-        element: <Alumni />,
-      },
-      {
-        path: "/academics",
-        element: <Academics />,
-      },
-      {
-        path: "/gallery",
-        element: <Gallery />,
-      },
-      {
-        path: "/contact",
-        element: <ContactUs />,
-      },
-    ],
+const router = createBrowserRouter([{
+  path: "/",
+  element: <App />,
+  errorElement: <Error />,
+  children: [{
+    index: true,
+    element: <Home />,
   },
+    {
+      path: "/timeline",
+      element: <Timeline />,
+    },
+    {
+      path: "/about",
+      element: <About />,
+    },
+    {
+      path: "/alumni",
+      element: <Alumni />,
+    },
+    {
+      path: "/academics",
+      element: <Academics />,
+    },
+    {
+      path: "/gallery",
+      element: <Gallery />,
+    },
+    {
+      path: "/contact",
+      element: <ContactUs />,
+    },
+  ],
+},
 ])
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
-      <RouterProvider router={router} />
+    <RouterProvider router={router} />
   </StrictMode>
 )

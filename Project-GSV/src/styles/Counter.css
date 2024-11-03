@@ -1,0 +1,66 @@
+.counter-up {
+  background: hsl(4, 91%, 60%);
+  min-height: 50vh;
+  padding: 0 50px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  margin: 2rem 0.8rem 2rem 0.8rem;
+  border-radius: 6px;
+}
+
+.counter-up .content {
+  z-index: 1;
+  position: relative;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+}
+.counter-up .content .box {
+  background: hsl(4,82.3%,66.5%);
+  width: calc(25% - 30px);
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-direction: column;
+  padding: 20px;
+}
+.content .box .icon i {
+  font-size: 3rem;
+  margin-bottom: .4em;
+  color: #f2f2f2;
+}
+.content .box .counter {
+  font-size: 50px;
+  font-weight: 500;
+  color: #f2f2f2;
+  font-family: "Work Sans", sans-serif;
+}
+
+.content .box .text {
+  font-weight: 400;
+  color: #ccc;
+}
+@media screen and (max-width: 1036px) {
+  .counter-up {
+    padding: 50px 50px 0 50px;
+  }
+  .counter-up .content .box {
+    width: calc(50% - 30px);
+    margin-bottom: 30px;
+  }
+}
+@media screen and (max-width: 580px) {
+  .counter-up .content .box {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 500px) {
+  .counter-up {
+    padding: 30px 20px 0 20px;
+  }
+}
