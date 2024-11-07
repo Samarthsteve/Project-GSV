@@ -1,4 +1,4 @@
-import React, {
+import {
   useState,
   useEffect
 } from 'react';
@@ -36,10 +36,10 @@ function App() {
       entries.forEach(entry => {
         if ((entry.isIntersecting) && !(entry.target.classList.contains("intro-text"))) {
           entry.target.classList.add(`${entry.target.classList[0]}-transition`);
-        } else if  ((entry.isIntersecting) && entry.target.classList.contains("intro-text")) {
+        } 
+        if ((entry.isIntersecting) && entry.target.classList.contains("heading")) {
           navbar.style.display = "block"
         }
-        
       }
       );
     });
@@ -49,13 +49,11 @@ function App() {
     const aboutCards = document.querySelectorAll('.about__cards .card') as NodeListOf < HTMLElement >;
     const featureCards = document.querySelectorAll('.features .feature') as NodeListOf < HTMLElement >;
     const testmonials = document.querySelectorAll(".Testimony .wrapper .container") as NodeListOf < HTMLElement >;
-    const carousel = document.querySelector(".intro-text") as HTMLElement;
 
     headings.forEach((element) => observer.observe(element));
     aboutCards.forEach((element) => observer.observe(element));
     featureCards.forEach((element) => observer.observe(element));
     testmonials.forEach((element) => observer.observe(element));
-    observer.observe(carousel);
   },
     [location.pathname]);
 

@@ -26,11 +26,11 @@ function TimelineScript() {
         const itemLength = selectors.item.length;
         $(window).scroll(function() {
           let max, min;
-          const pos = $(this).scrollTop();
+          const pos = $(this).scrollTop() ?? 0;
           selectors.item.each(function(i) {
-            min = $(this).offset().top;
-            max = $(this).height() + $(this).offset().top;
-            if (i == itemLength - 2 && pos > min + $(this).height() / 2) {
+            min = $(this).offset().top ?? 0;
+            max = ($(this).height() ?? 0) + ($(this).offset().top ?? 0);
+            if (i == itemLength - 2 && pos > min + ($(this).height() ?? 0) / 2) {
               selectors.item.removeClass(selectors.activeClass);
               selectors.id.css(
                 "background-image",
@@ -61,6 +61,7 @@ function TimelineScript() {
     }
     )(jQuery);
 
+    // @ts-ignore
     $("#timeline-1").timeline();
   }, []);
   return null;

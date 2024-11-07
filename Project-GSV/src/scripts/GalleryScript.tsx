@@ -2,7 +2,7 @@ import {useEffect} from "react";
 
 function GalleryScript() {
   useEffect(() => {
-    const $galleryContainer = ($('.gallery') as HTMLElement).isotope({
+    const $galleryContainer = ($('.gallery') as JQuery<HTMLElement>).isotope({
 		itemSelector: '.item',
   	layoutMode: 'masonry'
 	})

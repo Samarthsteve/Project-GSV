@@ -1,7 +1,7 @@
 import "../styles/Testimony.css";
 
 interface TestimonyProps {
-  testimonyList: Array;
+  testimonyList: Array < Object >;
 }
 
 function Testimony({ testimonyList }: TestimonyProps) {

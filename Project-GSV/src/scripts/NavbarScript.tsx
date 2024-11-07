@@ -1,6 +1,6 @@
 import { useEffect } from 'react'
 
-function NavbarScript(setTrigger) {
+function NavbarScript(setTrigger: (value: boolean) => void) {
   useEffect(() => {
     let lastScrollTop = 0;
     const navbar = document.getElementById("header") as HTMLElement;
