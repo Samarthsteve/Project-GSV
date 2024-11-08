@@ -1,8 +1,13 @@
 import "../styles/Academics.css"
 import Accordian from "./Accordian"
 import Hero from "./Hero"
+import {
+  useLoaderData
+} from "react-router-dom";
 
 function Academics () {
+  const loaderData = useLoaderData();
+
   const cards = [{
     title: "Curriculum",
     description: "Explore our comprehensive curriculum designed to foster academic excellence and holistic development.",
@@ -37,7 +42,7 @@ function Academics () {
 
   return(
     <div className="academics">
-      <Hero heroTitle="Academics" heroImg="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSCvjuMC2rSizh1-uDAT0MI7aDymGwvCiQDkvbIJSPV2tI49IPc2ByvmpQ&s=10" />
+      <Hero heroTitle={loaderData.hero.title} heroImg={loaderData.hero.img} />
 
       <div className="academics__intro">
         <h3 className="heading">Where Knowledge Meets Inspiration</h3>
@@ -63,7 +68,7 @@ function Academics () {
 
       <div className="faqs">
         <h3 className="heading">FAQs</h3>
-        <Accordian />
+        <Accordian questions={loaderData.questions} />
       </div>
     </div>
   );

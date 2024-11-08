@@ -1,44 +1,46 @@
 import "../styles/AlumniSlider.css";
 import AlumniSliderScript from "../scripts/AlumniSliderScript";
-import { Link } from 'react-router-dom';
+import {
+  Link
+} from 'react-router-dom';
 
-function AlumniSlider() {
-    AlumniSliderScript();
+interface Props {
+  slider: Array < Record < string,
+  any>>;
+}
 
-    const sliderList = ["https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSCvjuMC2rSizh1-uDAT0MI7aDymGwvCiQDkvbIJSPV2tI49IPc2ByvmpQ&s=10",
-        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSCvjuMC2rSizh1-uDAT0MI7aDymGwvCiQDkvbIJSPV2tI49IPc2ByvmpQ&s=10",
-        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSCvjuMC2rSizh1-uDAT0MI7aDymGwvCiQDkvbIJSPV2tI49IPc2ByvmpQ&s=10",
-                      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSCvjuMC2rSizh1-uDAT0MI7aDymGwvCiQDkvbIJSPV2tI49IPc2ByvmpQ&s=10",
-        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSCvjuMC2rSizh1-uDAT0MI7aDymGwvCiQDkvbIJSPV2tI49IPc2ByvmpQ&s=10"
-    ]
-    
-   return(
-       <>
-         <div className="slider">
+function AlumniSlider({
+  slider
+}: Props) {
+  
+  AlumniSliderScript();
+  return(
+    <>
+      <div className="slider">
         <div className="list">
-        {sliderList.map((item, index) => {
-                    return(
-                        <div className="item" key={index} >
-                        <img src={item} />
-                        </div>
-                    )
-                })}
-        </div>
-        <div className="buttons">
-            <button id="prev"></button>
-            <button id="next"></button>
-        </div>
-        <ul className="dots">
-            <li className="active"></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-        </ul>
+          {slider.map((item, index) => {
+            return(
+              <div className="item" key={index}>
+                <img src={item.img} alt={item.alt} />
+            </div>
+          )
+          })}
+      </div>
+      <div className="buttons">
+        <button id="prev"></button>
+        <button id="next"></button>
+      </div>
+      <ul className="dots">
+        <li className="active"></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+      </ul>
     </div>
-       <Link to="/gallery"><button className="button-85" role="button">View more</button></Link>
-       </>
-   );
+    <Link to="/gallery"><button className="button-85" role="button">View more</button></Link>
+  </>
+);
 }
 
 export default AlumniSlider;

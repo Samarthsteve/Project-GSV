@@ -5,7 +5,7 @@ const HomeSlider = require("../models/homeSliderModel");
 // Dev
 router.post("/", async (req, res) => {
   try {
-    await HomeSlider.create(req.body.sliders);
+    await HomeSlider.create(req.body);
     res.status(200).json({
       message: "Slider created successfully"
     });

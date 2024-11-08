@@ -5,7 +5,7 @@ const ImgThumbnail = require("../models/imgThumbnailModel");
 // Dev
 router.post("/", async (req, res) => {
   try {
-    await ImgThumbnail.create(req.body.thumbnails);
+    await ImgThumbnail.create(req.body);
     res.status(200).json({
       message: "Thumbnail created successfully"
     });

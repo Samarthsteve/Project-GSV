@@ -5,7 +5,7 @@ const Profile = require("../models/teamProfileModel");
 // Dev
 router.post("/", async (req, res) => {
   try {
-    await Profile.create(req.body.profiles);
+    await Profile.create(req.body);
     res.status(200).json({
       message: "Profile created successfully"
     });
@@ -42,7 +42,7 @@ router.get("/:Pid", async (req, res) => {
   try {
     const profile = await Profile.find({
       Pid: req.params.Pid
-    }); // Use findOne for a single result
+    });
     if (!profile) {
       return res.status(404).json({
         message: "Profile not found"

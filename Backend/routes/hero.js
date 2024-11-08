@@ -5,7 +5,7 @@ const Hero = require("../models/heroModel");
 // Dev
 router.post("/", async (req, res) => {
   try {
-    await Hero.create(req.body.heros);
+    await Hero.create(req.body);
     res.status(200).json({
       message: "Hero created successfully"
     });
@@ -60,9 +60,6 @@ router.patch("/:Pid", getHero, async (req, res) => {
 
   if (body.img != null) {
     hero.img = body.img
-  }
-  if (body.alt != null) {
-    hero.alt = body.alt
   }
   if (body.title != null) {
     hero.title = body.title

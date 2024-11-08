@@ -1,8 +1,12 @@
 import "../styles/HomeHero.css"
 import heroImg from "../assets/Education.svg"
 
-function HomeHero() {
+interface Props {
+  heroImg: string;
+  heroAlt: string;
+}
 
+function HomeHero(props: Props) {
   return (
     <div className="Home-hero">
       <div>
@@ -12,7 +16,7 @@ function HomeHero() {
       </div>
       <main>
         <div className="container">
-          <img src={heroImg} alt="" />
+          <img src={props.heroImg} alt={props.heroAlt} />
         <div className="hero-text">
           <h1>Your Child's Best Nurturing Choice</h1>
           <p>
