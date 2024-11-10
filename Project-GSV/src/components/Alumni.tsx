@@ -5,37 +5,83 @@ import Testimony from "./Testimony";
 import {
   useLoaderData
 } from "react-router-dom";
+import {
+  useState
+} from "react";
+import axios from "axios";
+import {
+  ToastContainer,
+  toast
+} from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 function Alumni() {
   const loaderData = useLoaderData();
+  
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [graduationYear, setGraduationYear] = useState("");
+  const [message, setMessage] = useState("");
+  
+  const handleSubmit = async (e) => {
+    e.preventDefault();
 
-  const testimonyList = [{
-    name: "John Doe",
-    message: "I'm grateful for the opportunity to be a part of your alumni network. Your dedication to your school and your commitment to excellence have been invaluable. I'm excited to continue making a positive impact in my community.",
-    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSCvjuMC2rSizh1-uDAT0MI7aDymGwvCiQDkvbIJSPV2tI49IPc2ByvmpQ&s=10"
-  },
-    {
-      name: "Jane Smith",
-      message: "I'm thankful for the opportunity to be a part of your alumni network. Your dedication to your school and your commitment to excellence have been invaluable. I'm excited to continue making a positive impact in my community.",
-      image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSCvjuMC2rSizh1-uDAT0MI7aDymGwvCiQDkvbIJSPV2tI49IPc2ByvmpQ&s=10"
-    },
-    {
-      name: "Michael Johnson",
-      message: "I'm grateful for the opportunity to be a part of your alumni network. Your dedication to your school and your commitment to excellence have been invaluable. I'm excited to continue making a positive impact in my community.",
-      image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSCvjuMC2rSizh1-uDAT0MI7aDymGwvCiQDkvbIJSPV2tI49IPc2ByvmpQ&s=10"
-    },
-    {
-      name: "Emily Brown",
-      message: "I'm thankful for the opportunity to be a part of your alumni network. Your dedication to your school and your commitment to excellence have been invaluable. I'm excited to continue making a positive impact in my community.",
-      image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSCvjuMC2rSizh1-uDAT0MI7aDymGwvCiQDkvbIJSPV2tI49IPc2ByvmpQ&s=10"
-    },
-    {
-      name: "David Lee",
-      message: "I'm grateful for the opportunity to be a part of your alumni network. Your dedication to your school and your commitment to excellence have been invaluable. I'm excited to continue making a positive impact in my community.",
-      image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSCvjuMC2rSizh1-uDAT0MI7aDymGwvCiQDkvbIJSPV2tI49IPc2ByvmpQ&s=10"
-    }]
+    try {
+      // Sending request to backend
+      const response = await axios.post("http://localhost:5000/alumniForm", {
+        name,
+        email,
+        graduationYear,
+        message,
+      });
+
+      // Handling responses based on backend result
+      if (response.data.status === "success") {
+        toast.success("Alumni form submitted successfully!", {
+          position: "top-right",
+          autoClose: 3000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+        });
+        setName("");
+        setEmail("");
+        setGraduationYear("");
+        setMessage("");
+      } else if (response.data.status === "duplicate") {
+        toast.warning("This email is already registered.", {
+          position: "top-right",
+          autoClose: 3000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+        });
+      } else {
+        toast.error("An error occurred. Please try again later.", {
+          position: "top-right",
+          autoClose: 3000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+        });
+      }
+    } catch (error) {
+      toast.error("Failed to connect. Please check your network.", {
+        position: "top-right",
+        autoClose: 3000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+      });
+    }
+  };
 
   return(
+    <>
     <main className="alumni">
       <Hero heroTitle={loaderData.hero.title} heroImg={loaderData.hero.img} />
       <div className="alumni__intro">
@@ -73,29 +119,42 @@ function Alumni() {
           <p className="form-caption">
             Join the legacy and stay connected with your alma mater.
           </p>
-          <form>
+          <form onSubmit={handleSubmit}>
             {/* <!-- Name Field --> */}
             <div className="form-group">
               <label htmlFor="name">Name</label>
-              <input type="text" id="name" name="name" required />
+              <input id="name" name="name" type="text" placeholder="Full Name" value={name}
+              onChange={(e) => setName(e.target.value)}
+              required />
           </div>
 
           {/* <!-- Email Field --> */}
           <div className="form-group">
             <label htmlFor="email">Email</label>
-            <input type="email" id="email" name="email" required />
+            <input id="email" name="email" type="email"
+            placeholder="Email"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+            required />
         </div>
 
         {/* <!-- Graduation Year Field --> */}
         <div className="form-group">
           <label htmlFor="graduationYear">Graduation Year</label>
-          <input type="number" id="graduationYear" name="graduationYear" required />
+          <input id="graduationYear" name="graduationYear" type="number"
+            placeholder="Graduation Year"
+            value={graduationYear}
+            onChange={(e) => setGraduationYear(e.target.value)}
+            required />
       </div>
 
       {/* <!-- Message Field --> */}
       <div className="form-group">
         <label htmlFor="message">Message</label>
-        <textarea id="message" name="message"></textarea>
+        <textarea id="message" name="message" placeholder="Your Message"
+            value={message}
+            onChange={(e) => setMessage(e.target.value)}
+            required />
       </div>
 
       {/* <!-- Submit Button --> */}
@@ -104,6 +163,16 @@ function Alumni() {
   </div>
 </div>
 </main>
+<ToastContainer position="top-right"
+autoClose={3000}
+hideProgressBar={true}
+newestOnTop={false}
+closeOnClick
+rtl={false}
+pauseOnFocusLoss
+draggable
+pauseOnHover />
+</>
 );
 }
 

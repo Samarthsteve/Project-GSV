@@ -4,11 +4,16 @@ import Hero from "./Hero";
 import {
   useLoaderData
 } from "react-router-dom";
+import {
+  ToastContainer
+} from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 export default function ContactUs() {
   const hero = useLoaderData();
 
   return (
+    <>
     <main className="contact-us">
       <Hero heroTitle={hero.title} heroImg={hero.img} />
 
@@ -78,5 +83,16 @@ export default function ContactUs() {
         <NewsletterForm />
       </div>
     </main>
+    
+<ToastContainer position="top-right"
+autoClose={3000}
+hideProgressBar={true}
+newestOnTop={false}
+closeOnClick
+rtl={false}
+pauseOnFocusLoss
+draggable
+pauseOnHover />
+    </>
   );
 }

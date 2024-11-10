@@ -50,6 +50,18 @@ const connectDB = require('./config/db');
   // Gallery Endpoint
   const galleryEndpoint = require("./routes/gallery");
   app.use("/gallery", galleryEndpoint);
+  
+  // Newsletter Endpoint
+  const newsletterEndpoint = require("./routes/newsletter");
+  app.use("/newsletter", newsletterEndpoint);
+  
+  // Enquiry Endpoint
+  const enquiryEndpoint = require("./routes/enquiry");
+  app.use("/enquiry", enquiryEndpoint)
+  ;
+  // Alumni Form Endpoint
+  const alumniFormEndpoint = require("./routes/alumniForm");
+  app.use("/alumniForm", alumniFormEndpoint);
 
   // Start the server
   const PORT = process.env.PORT || 5000;

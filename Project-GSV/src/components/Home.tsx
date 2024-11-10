@@ -7,9 +7,83 @@ import {
   Link,
   useLoaderData
 } from "react-router-dom"
+import {
+  useState
+} from "react";
+import axios from "axios";
+import {
+  ToastContainer,
+  toast
+} from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 function Home() {
   const loaderData = useLoaderData();
+  const [fullName,
+    setFullName] = useState("");
+  const [phoneNumber,
+    setPhoneNumber] = useState("");
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    // Validate phone number (simple check for digits)
+    const phoneRegex = /^\d{10}$/;
+    if (!phoneRegex.test(phoneNumber)) {
+      toast.warning("Please enter a valid 10-digit phone number.", {
+        position: "top-right",
+        autoClose: 3000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+      });
+      return;
+    }
+
+    try {
+      // Sending request to backend
+      const response = await axios.post("http://localhost:5000/enquiry", {
+        fullName, phoneNumber
+      });
+
+      // Handling responses based on backend result
+      if (response.data.status === "success") {
+        toast.success("Enquiry submitted successfully!", {
+          position: "top-right",
+          autoClose: 3000,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          hideProgressBar: false,
+        });
+        setFullName("");
+        setPhoneNumber("");
+      }  else {
+        toast.error("An error occurred. Please try again later.", {
+          position: "top-right",
+          autoClose: 3000,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          hideProgressBar: false,
+
+        });
+      }
+    } catch (error) {
+      console.log(error.message)
+      toast.error("Failed to connect. Please check your network.", {
+        position: "top-right",
+        autoClose: 3000,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        hideProgressBar: false,
+      });
+    }
+  };
+
 
   return (
     <main className="Home">
@@ -66,23 +140,37 @@ function Home() {
       <div className="text">
         Request an Enquiry
       </div>
-      <form action="#">
+      <form onSubmit={handleSubmit}>
         <div className="field">
-          <input type="text" required />
+          <input type="text" required
+          value={fullName}
+          onChange={(e) => setFullName(e.target.value)} />
         <span className="fas fa-user"></span>
         <label>Full Name</label>
       </div>
       <div className="field">
-        <input type="text" required />
+        <input type="tel"
+        value={phoneNumber}
+        onChange={(e) => setPhoneNumber(e.target.value)}
+        required />
       <span className="fas fa-lock"></span>
       <label>Phone Number</label>
     </div>
-    <button>Submit</button>
+    <button type="submit">Submit</button>
   </form>
 </div>
 </div>
+<ToastContainer position="top-right"
+autoClose={3000}
+hideProgressBar={true}
+newestOnTop={false}
+closeOnClick
+rtl={false}
+pauseOnFocusLoss
+draggable
+pauseOnHover />
 </main>
-);
+)
 }
 
 export default Home;
