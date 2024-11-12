@@ -18,13 +18,40 @@ import {
 import "react-toastify/dist/ReactToastify.css";
 
 function Home() {
-  const loaderData = useLoaderData();
+  const loaderData = useLoaderData() as {
+    hero: {
+      img: string,
+      alt: string,
+    },
+    carousel: [{
+      img: string,
+      alt: string,
+      title: string,
+      subtitle: string,
+    }],
+    thumbnail: {
+      img: string,
+      alt: string,
+    },
+    testimony: [{
+      img: string,
+      alt: string,
+      name: string,
+      comment: string,
+    }],
+    profiles: [{
+      img: string,
+      name: string,
+      designation: string,
+      comment: string,
+    }]
+  };
   const [fullName,
     setFullName] = useState("");
   const [phoneNumber,
     setPhoneNumber] = useState("");
 
-  const handleSubmit = async (e) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
     // Validate phone number (simple check for digits)
@@ -43,8 +70,9 @@ function Home() {
     }
 
     try {
+      const baseUrl = import.meta.env.VITE_API_URL;
       // Sending request to backend
-      const response = await axios.post("http://localhost:5000/enquiry", {
+      const response = await axios.post(`${baseUrl}enquiry`, {
         fullName, phoneNumber
       });
 
@@ -71,8 +99,7 @@ function Home() {
 
         });
       }
-    } catch (error) {
-      console.log(error.message)
+    } catch {
       toast.error("Failed to connect. Please check your network.", {
         position: "top-right",
         autoClose: 3000,

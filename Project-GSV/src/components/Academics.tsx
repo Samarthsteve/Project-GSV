@@ -6,7 +6,17 @@ import {
 } from "react-router-dom";
 
 function Academics () {
-  const loaderData = useLoaderData();
+  const loaderData = useLoaderData() as {
+    hero: {
+      img: string,
+      title: string,
+    },
+    questions: [{
+      Uid: string,
+      question: string,
+      answer: string
+    }]
+  };
 
   const cards = [{
     title: "Curriculum",

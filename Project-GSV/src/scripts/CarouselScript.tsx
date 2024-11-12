@@ -23,9 +23,12 @@ function CarouselScript() {
     prevDom.onclick = function() {
       showSlider('prev');
     }
-    let runTimeOut;
+    let runTimeOut = setTimeout(() => {
+      carouselDom.classList.remove('next');
+      carouselDom.classList.remove('prev');
+    }, timeRunning);
     let runNextAuto = setTimeout(() => {
-      next.click();
+      nextDom.click();
     }, timeAutoNext)
     function showSlider(type: string) {
       const SliderItemsDom = SliderDom.querySelectorAll('.carousel .list .item') as NodeListOf < HTMLElement >;
@@ -41,20 +44,21 @@ function CarouselScript() {
         carouselDom.classList.add('prev');
       }
       clearTimeout(runTimeOut);
+
+
+      clearTimeout(runNextAuto);
       runTimeOut = setTimeout(() => {
         carouselDom.classList.remove('next');
         carouselDom.classList.remove('prev');
       }, timeRunning);
-
-      clearTimeout(runNextAuto);
       runNextAuto = setTimeout(() => {
-        next.click();
+        nextDom.click();
       }, timeAutoNext)
     }
-  return(() => {
-    clearTimeout(runTimeOut);
-    clearTimeout(runNextAuto);
-  })
+    return(() => {
+      clearTimeout(runTimeOut);
+      clearTimeout(runNextAuto);
+    })
   },
     [])
 

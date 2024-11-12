@@ -5,8 +5,10 @@ import {
 } from 'react-router-dom';
 
 interface Props {
-  slider: Array < Record < string,
-  any>>;
+  slider: [{
+      img: string,
+      alt: string,
+    }];
 }
 
 function AlumniSlider({

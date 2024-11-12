@@ -12,11 +12,12 @@ export default function NewsletterForm() {
   const [email,
     setEmail] = useState("");
 
-  const handleSubmit = async (e) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
     try {
-      const response = await axios.post("http://localhost:5000/newsletter", {
+      const baseUrl = import.meta.env.VITE_API_URL;
+      const response = await axios.post(`${baseUrl}/newsletter`, {
         email
       });
       if (response.data.status === "success") {
@@ -50,8 +51,7 @@ export default function NewsletterForm() {
 
         });
       }
-    } catch (error) {
-      console.log(error.message)
+    } catch {
       toast.error("Failed to connect. Please check your network.", {
         position: "top-right",
         autoClose: 3000,

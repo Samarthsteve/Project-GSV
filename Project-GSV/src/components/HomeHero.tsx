@@ -1,12 +1,14 @@
 import "../styles/HomeHero.css"
-import heroImg from "../assets/Education.svg"
 
 interface Props {
   heroImg: string;
   heroAlt: string;
 }
 
-function HomeHero(props: Props) {
+function HomeHero({
+  heroImg,
+  heroAlt
+}: Props) {
   return (
     <div className="Home-hero">
       <div>
@@ -16,7 +18,7 @@ function HomeHero(props: Props) {
       </div>
       <main>
         <div className="container">
-          <img src={props.heroImg} alt={props.heroAlt} />
+          <img src={heroImg} alt={heroAlt} />
         <div className="hero-text">
           <h1>Your Child's Best Nurturing Choice</h1>
           <p>

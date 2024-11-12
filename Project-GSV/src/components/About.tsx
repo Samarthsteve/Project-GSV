@@ -5,7 +5,22 @@ import {
 } from "react-router-dom";
 
 function About() {
-  const loaderData = useLoaderData();
+  const loaderData = useLoaderData() as {
+    hero: {
+      img: string,
+      title: string,
+    },
+    thumbnail: {
+      img: string,
+      alt: string,
+    },
+    profiles: [{
+      img: string,
+      name: string,
+      designation: string,
+      place: string,
+    }]
+  }
 
   const cards = [{
     title: "Our Vision",

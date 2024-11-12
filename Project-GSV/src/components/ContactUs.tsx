@@ -10,7 +10,10 @@ import {
 import "react-toastify/dist/ReactToastify.css";
 
 export default function ContactUs() {
-  const hero = useLoaderData();
+  const hero = useLoaderData() as {
+      img: string,
+      title: string,
+    };
 
   return (
     <>

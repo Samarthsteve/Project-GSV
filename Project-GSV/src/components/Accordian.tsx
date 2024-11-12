@@ -1,8 +1,11 @@
 import "../styles/Accordian.css"
 
 interface Props {
-  questions: Array < Record < string,
-  any>>;
+  questions: [{
+      Uid: string,
+      question: string,
+      answer: string
+    }];
 }
 
 function Accordian({

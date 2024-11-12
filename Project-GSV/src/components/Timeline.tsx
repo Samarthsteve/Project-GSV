@@ -6,7 +6,19 @@ import {
 } from "react-router-dom";
 
 function Timeline() {
-  const loaderData = useLoaderData();
+  const loaderData = useLoaderData() as {
+    hero: {
+      img: string,
+      title: string,
+    },
+    timeline: [{
+      title: string,
+      img: string,
+      alt: string,
+      time: string,
+      description: string,
+    }]
+  };
 
   TimelineScript();
 

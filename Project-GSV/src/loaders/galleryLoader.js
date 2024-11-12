@@ -1,13 +1,14 @@
 import axios from "axios"
 
 async function GalleryLoader () {
+  const baseUrl = import.meta.env.VITE_API_URL;
   let loaderData = {};
 
   // Get Hero
-  await axios.get("http://localhost:5000/hero/gallery").then(res => loaderData.hero = res.data);
+  await axios.get(`${baseUrl}hero/gallery`).then(res => loaderData.hero = res.data);
 
   // Get Image
-  await axios.get("http://localhost:5000/gallery").then(res => {
+  await axios.get(`${baseUrl}gallery`).then(res => {
     loaderData.images = res.data;
 
     const typeOrderMap = {

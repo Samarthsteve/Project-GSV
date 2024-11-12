@@ -5,13 +5,17 @@ import {
 } from "react-router-dom";
 
 interface Props {
-  carousel: Array < Record < string,
-  any>>;
+  carousel: [{
+      img: string,
+      alt: string,
+      title: string,
+      subtitle: string,
+    }];
 }
 
 function Carousel({
   carousel
-}: props) {
+}: Props) {
 
   CarouselScript();
   const navigate = useNavigate();

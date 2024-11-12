@@ -1,8 +1,12 @@
 import "../styles/Testimony.css";
 
 interface TestimonyProps {
-  testimonyList: Array < Record < string,
-  any>>;
+  testimonyList: [{
+      img: string,
+      alt: string,
+      name: string,
+      comment: string,
+    }];
 }
 
 function Testimony({

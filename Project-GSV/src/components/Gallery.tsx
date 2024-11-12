@@ -6,7 +6,18 @@ import {
 } from "react-router-dom";
 
 function Gallery() {
-  const loaderData = useLoaderData();
+  const loaderData = useLoaderData() as {
+    hero: {
+      img: string,
+      title: string,
+    },
+    images: [{
+      img: string,
+      title: string,
+      alt: string,
+      type: string,
+    }]
+  };
 
   GalleryScript();
 
@@ -23,7 +34,7 @@ function Gallery() {
 
           {/* <!--  *****  Buttons Section Starts  *****  --> */}
           <div className="button-group">
-            <button className="button active" data-filter="*">All</button>
+            <button className="button active" id="all" data-filter="*">All</button>
             <button className="button" data-filter=".alumni">Alumni</button>
             <button className="button" data-filter=".event">Events</button>
             <button className="button" data-filter=".trip">Trips</button>
@@ -36,9 +47,9 @@ function Gallery() {
             {loaderData.images.map((image, index) => {
               return(
                 <div className={`item ${image.type}`} key={index}>
-                  <img src={image.img} loading="lazy" alt={image.alt}/>
+                  <img src={image.img} loading="lazy" alt={image.alt} />
                 <div className="overlay">
-                  <a href="#">{image.title}</a>
+                  <a>{image.title}</a>
                 </div>
               </div>
             );

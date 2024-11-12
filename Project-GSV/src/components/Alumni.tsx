@@ -16,19 +16,36 @@ import {
 import "react-toastify/dist/ReactToastify.css";
 
 function Alumni() {
-  const loaderData = useLoaderData();
+  const loaderData = useLoaderData() as {
+    hero: {
+      img: string,
+      title: string,
+    },
+    testimony: [{
+      img: string,
+      alt: string,
+      name: string,
+      comment: string,
+    }],
+    slider: [{
+      img: string,
+      alt: string,
+    }],
+    
+  };
   
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [graduationYear, setGraduationYear] = useState("");
   const [message, setMessage] = useState("");
   
-  const handleSubmit = async (e) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
     try {
+      const baseUrl = import.meta.env.VITE_API_URL;
       // Sending request to backend
-      const response = await axios.post("http://localhost:5000/alumniForm", {
+      const response = await axios.post(`${baseUrl}alumniForm`, {
         name,
         email,
         graduationYear,
@@ -68,7 +85,7 @@ function Alumni() {
           draggable: true,
         });
       }
-    } catch (error) {
+    } catch {
       toast.error("Failed to connect. Please check your network.", {
         position: "top-right",
         autoClose: 3000,
