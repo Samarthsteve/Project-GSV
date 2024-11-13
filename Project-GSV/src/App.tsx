@@ -30,13 +30,12 @@ function App() {
       setFooterMargin('30px 0 0 0');
       setFooterLine(false);
     }
-
     // Intersection Observer
     const observer = new IntersectionObserver(entries => {
       entries.forEach(entry => {
         if ((entry.isIntersecting) && !(entry.target.classList.contains("intro-text"))) {
           entry.target.classList.add(`${entry.target.classList[0]}-transition`);
-        } 
+        }
         if ((entry.isIntersecting) && entry.target.classList.contains("heading")) {
           navbar.style.display = "block"
         }

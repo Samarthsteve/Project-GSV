@@ -62,6 +62,10 @@ const connectDB = require('./config/db');
   // Alumni Form Endpoint
   const alumniFormEndpoint = require("./routes/alumniForm");
   app.use("/alumniForm", alumniFormEndpoint);
+  
+  // Mount the /cloudinary route
+  const cloudinaryRoute = require('./routes/cloudinaryRoute');
+  app.use('/cloudinary', cloudinaryRoute);
 
   // Start the server
   const PORT = process.env.PORT || 5000;
