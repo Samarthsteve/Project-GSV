@@ -1,6 +1,7 @@
 import axios from "axios"
 
 async function TimelineLoader () {
+  const baseUrl = import.meta.env.VITE_API_URL;
   let loaderData = {};
 
   // For images
