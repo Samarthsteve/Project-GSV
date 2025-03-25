@@ -20,11 +20,11 @@ function HomeHero({
         <div className="container">
           <img src={heroImg} alt={heroAlt} />
         <div className="hero-text">
-          <h1>Your Child's Best Nurturing Choice</h1>
+          <h1>Empowering Young Minds, Enriching Bright Futures</h1>
           <p>
-            Get your child into one of the top schools in Northern Karnataka. Teach them with the values of - "Vasudhaiva Kutumbakam"
+            A top choice for quality education in Northern Karnataka, where learning meets values under the guiding principle of 'Vasudhaiva Kutumbakam.
           </p>
-          <a href="#enquiry"><button>Get me to the Enquiry</button> </a>
+          <a href="#enquiry"><button>Explore Admissions</button> </a>
         </div>
       </div>
     </main>

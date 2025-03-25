@@ -121,7 +121,7 @@ function Home() {
       <div className="intro-text">
         <h3 className="heading">We Are...</h3>
         <p className="description">
-          At Gnyana Sudha Vidyalaya, we are dedicated to shaping bright minds and nurturing holistic development. For the past 20 years, our institution has been committed to excellence, blending traditional values with modern education to inspire curiosity, creativity, and character. Located in the heart of Bidar, we provide a supportive environment where students are encouraged to excel academically, grow personally, and embrace a global outlook. Join us as we continue our journey in building future leaders and responsible world citizens.
+          For over 20 years, Gnyana Sudha Vidyalaya has been more than just a school—it’s a foundation for future leaders and responsible global citizens. Nestled in a serene, green landscape away from the city's noise, our campus provides the perfect environment for focused learning and personal growth. We blend academic excellence with strong values, nurturing curiosity, creativity, and character in every student. With experienced faculty, modern facilities, and a vision rooted in 'Vasudhaiva Kutumbakam,' we empower young minds to thrive in a global society.
         </p>
       </div>
 
@@ -129,7 +129,7 @@ function Home() {
         <img src={loaderData.thumbnail.img} alt={loaderData.thumbnail.alt} />
       <h3 className="heading">Into Vicennality</h3>
       <p className="description">
-        At Gnyana Sudha Vidyalaya, we are dedicated to shaping bright minds and nurturing holistic development. For the past 20 years, our institution has been committed to excellence, blending traditional values with modern education to inspire curiosity, creativity, and character. Located in the heart of Bidar, we provide a supportive environment where students are encouraged to excel academically, grow personally, and embrace a global outlook. Join us as we continue our journey in building future leaders and responsible world citizens.
+        Twenty years ago, Gnyana Sudha Vidyalaya began as a vision—to nurture young minds with knowledge, values, and a global perspective. Over the years, as Bidar has grown, so have we. From a single institution to one of the city's largest schools, expanding into multiple branches and colleges, we have remained committed to excellence. Our alumni today stand as doctors, engineers, navy officers, and professionals shaping the world. As we celebrate this milestone, we invite you to explore our journey—20 years of shaping futures and making an impact.
       </p>
       <Link to="/timeline"><button className="button-85" role="button">Explore our Journey</button></Link>
     </div>
