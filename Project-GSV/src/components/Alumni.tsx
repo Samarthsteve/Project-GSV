@@ -104,14 +104,14 @@ function Alumni() {
       <div className="alumni__intro">
         <h3 className="heading">Our Alumni, Our Legacy</h3>
         <p className="description">
-          For the past 20 years, our school has been a place where dreams are nurtured and lifelong values are instilled. Our alumni continue to shine as ambassadors of our institution, making remarkable contributions in their fields and communities. This page celebrates their stories and achievements.
+          Gnyana Sudha Vidyalaya takes immense pride in its alumni, who have carved a niche for themselves across various fields. From academics to entrepreneurship, from the armed forces to global business, our former students are a testament to the values and education imparted here. Their journeys inspire current and future students, showcasing the power of perseverance, discipline, and excellence that GSV instills in every learner.
         </p>
       </div>
 
       <div className="alumni__testimonies">
         <h3 className="heading">Voices of Our Alumni</h3>
         <p className="description">
-          Our alumni reflect on their journeys, sharing the lessons, friendships, and experiences that shaped their paths. Their stories are a testament to the power of education, community, and lifelong learning.
+          The true essence of a school lies in the success and memories of its students. Here are the voices of some of our distinguished alumni, sharing their experiences and reflections on their time at GSV.
         </p>
         <Testimony testimonyList={loaderData.testimony} />
       </div>
@@ -119,7 +119,7 @@ function Alumni() {
       <div className="alumni__gallery">
         <h3 className="heading">Celebrating Alumni Connections</h3>
         <p className="description">
-          Our alumni remain an integral part of our school community, always connected by the shared memories of their time here. From reunions to professional milestones, these images capture moments of joy, celebration, and continued growth. Scroll through to see snapshots of our alumni gatherings and the enduring bonds that define our school family.
+          At GSV, we believe that the bond between a student and their school lasts a lifetime. We actively foster connections with our alumni through reunions, networking events, and mentorship programs. Whether you wish to reconnect with old friends, contribute to school initiatives, or mentor the next generation of GSV students, we welcome you to be a part of our ever-growing alumni network.
         </p>
         <AlumniSlider slider={loaderData.slider} />
       </div>
@@ -128,7 +128,7 @@ function Alumni() {
         <h3 className="heading">Join Our Alumni Network</h3>
 
         <p className="description">
-          Whether you're reconnecting with old friends or looking to share your journey with current students, our alumni network is a growing community that welcomes all. Stay in touch, contribute to future events, and help inspire the next generation of students by joining our alumni platform. Your journey with us never truly ends!
+          We invite all our alumni to stay connected, share their experiences, and contribute to the GSV legacy. Whether you have a story to tell, achievements to celebrate, or simply want to reconnect, our alumni network is the perfect place for you.
         </p>
 
         <div className="form-container">

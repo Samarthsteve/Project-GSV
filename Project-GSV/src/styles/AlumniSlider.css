@@ -21,15 +21,15 @@
   height: 100%;
   object-fit: cover;
 }
-.slider .buttons{
+/* .slider .buttons{
   position: absolute;
   top: 45%;
   left: 5%;
   width: 90%;
   display: flex;
   justify-content: space-between;
-}
-.slider .buttons button{
+} */
+/* .slider .buttons button{
   width: 50px;
   height: 50px;
   border-radius: 50%;
@@ -38,7 +38,7 @@
   border: none;
   font-family: monospace;
   font-weight: bold;
-}
+} */
 .slider .dots{
   position: absolute;
   bottom: 10px;

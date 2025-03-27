@@ -24,15 +24,15 @@ function About() {
 
   const cards = [{
     title: "Our Vision",
-    description: "At Gnyana Sudha Vidyalaya, our mission is to provide a nurturing and inclusive learning environment where students are empowered to achieve academic excellence, embrace diversity, and make meaningful contributions to society. We are committed to foster a culture of lifelong learning, personal growth, and social responsibility among our students, preparing them to thrive in a dynamic and interconnected world."
+    description: "To empower students with the knowledge, skills, and values to excel in a rapidly changing world, shaping them into responsible global citizens who contribute to the welfare of humanity."
   },
     {
       title: "Our Mission",
-      description: "Our vision at Gnyana Sudha Vidyalaya is to be a leading institution of excellence in education, known for our innovative teaching practices, holistic approach to learning, and commitment to student success. We aspire to cultivate a community of lifelong learners who possess the knowledge, skills, and values needed to become compassionate leaders and active contributors to a global society."
+      description: "At GSV, we are committed to providing an inclusive and holistic education that nurtures the intellectual, emotional, and social development of each student. We aim to create a learning environment where curiosity, creativity, and academic excellence flourish, preparing students for success in their personal and professional lives."
     },
     {
       title: "Core Values",
-      description: "Gnyana Sudha Vidyalaya, excellence is our standard, integrity our cornerstone, and inclusivity our hallmark. Through these core values, we inspire a community committed to academic excellence, personal growth, and positive societal impact, shaping individuals who embody the spirit of excellence, integrity, inclusivity, empowerment, collaboration, resilience, and service in all endeavors"
+      description: "At GSV, we uphold integrity, excellence, and compassion as our guiding principles. We foster honesty, encourage innovation, and nurture a strong sense of community. With a focus on discipline and creativity, we shape responsible individuals ready to embrace the future with confidence."
     },
   ];
 
@@ -43,9 +43,8 @@ function About() {
       <div className="about__intro">
         <h3 className="heading">Our Legacy</h3>
         <p className="description">
-          The purpose of education is not only to gain knowledge but wisdom also. Wisdom is one’s true wealth and better than strength.
-          <span className="br"></span>For the past 20 years, our school has been a place where dreams are nurtured and lifelong values are instilled. Our alumni continue to shine as ambassadors of our institution, making remarkable contributions in their fields and communities. This page celebrates their stories and achievements.
-          <span className="br"></span>The genesis of GSV is a blessing in the field of education in Bidar.  This dedicated institution has uplifted the morale of education in the terms of teaching, learning and holistic development a child.
+          Gnyana Sudha Vidyalaya has been a pillar of education in Bidar since its inception in 2005. What started as a small school with just 35 students has grown into one of the most respected institutions in the region. The guiding principle of <em>Vasudhaiva Kutumbakam</em> (the world is one family) has been the foundation of our success, shaping not only our academic curriculum but also instilling a sense of responsibility and compassion in our students.
+          <span className="br"></span>Over the years, we have evolved into a place where education is a journey that nurtures curiosity, discipline, and a lifelong passion for learning. Our institution’s continuous growth, driven by a dedicated team of educators, visionary leadership, and unwavering community support, reflects the collective effort to shape well-rounded global citizens.
         </p>
       </div>
 
@@ -69,7 +68,8 @@ function About() {
     <div className="about__potential">
       <h3 className="heading">Unlocking Potential, Igniting Passion</h3>
       <p className="description">
-        At Gnyana Sudha Vidyalaya, we believe in unlocking the potential of every student and igniting their passion for learning. Through a dynamic and engaging curriculum, personalized support, and innovative teaching methods, we inspire students to explore their interests, pursue their goals, and make meaningful contributions to the world. Join us on a journey of discovery, growth, and transformation as we empower students to unleash their full potential and become leaders of tomorrow.
+        At GSV, every child is seen as a unique individual with untapped potential. We offer more than just traditional education—we empower our students to explore their passions, challenge their limits, and discover their true capabilities. Our teachers act as mentors, guiding students not only through textbooks but also through life’s challenges, helping them to unlock their full potential and ignite a lifelong passion for learning.
+        <span className="br"></span>We believe that every student has the ability to achieve greatness, and it is our job to help them realize it. With a diverse range of academic and co-curricular opportunities, we strive to provide an environment where students are motivated to reach new heights, both inside and outside the classroom.
       </p>
     </div>
 

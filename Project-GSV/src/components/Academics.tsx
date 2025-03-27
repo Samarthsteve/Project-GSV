@@ -20,32 +20,32 @@ function Academics () {
 
   const cards = [{
     title: "Curriculum",
-    description: "Explore our comprehensive curriculum designed to foster academic excellence and holistic development.",
+    description: "Our comprehensive curriculum starts with a fun, engaging approach in Kindergarten, builds strong fundamentals in Classes I-V, and evolves into a rigorous academic challenge in Classes VI-X. It’s an educational journey where every lesson is a step toward a brighter future.",
     icon: "earth-americas",
   },
     {
       title: "Faculty",
-      description: "Meet our dedicated faculty members who are committed to inspiring and guiding students towards success.",
+      description: "Our team of dedicated educators isn’t just teaching—they’re inspiring. With passion, expertise, and a dash of creative genius, our faculty ensures every student gets the guidance they need to soar.",
       icon: "people-arrows",
     },
     {
       title: "Facilites",
-      description: "Engage in a variety of extracurricular activities aimed at nurturing talents and fostering well-rounded individuals.",
+      description: "From modern classrooms to well-equipped labs and libraries, our campus is built to foster innovative learning. The environment is designed to be as dynamic as our students, with every corner encouraging exploration and growth.",
       icon: "person",
     },
     {
       title: "Student Support",
-      description: "Access personalized support services and resources to ensure every student's academic and personal success.",
+      description: "We believe every child has untapped potential. With personalized mentoring, academic counseling, and career guidance, we help students overcome challenges and unlock their full capabilities—no magic wand required!",
       icon: "house-user",
     },
     {
       title: "Community Engagement",
-      description: "Explore our initiatives to foster community involvement, social responsibility, and civic engagement among our students.",
+      description: "Education at GSV goes beyond our campus. We actively involve our students in community initiatives and cultural programs, reinforcing the values of social responsibility and teamwork.",
       icon: "users",
     },
     {
       title: "Extracurricular Activities",
-      description: "Engage in a variety of extracurricular activities aimed at nurturing talents and fostering well-rounded individuals.",
+      description: "Whether it’s sports, music, arts, or tech clubs, our extracurricular programs ensure that learning happens everywhere. After all, developing well-rounded talents is just as important as acing that exam.",
       icon: "handshake",
     },
   ];
@@ -57,11 +57,12 @@ function Academics () {
       <div className="academics__intro">
         <h3 className="heading">Where Knowledge Meets Inspiration</h3>
         <p className="description">
-          With a focus on holistic development and personalized instruction, we strive to nurture a passion for learning that extends beyond the classroom. From foundational concepts to advanced topics, our dynamic curriculum prepares students to excel academically and become lifelong learners. Join us as we embark on a journey of intellectual discovery and academic excellence at Guru Nanak Public School.
+          At GSV, learning isn’t just about textbooks—it’s about sparking curiosity and nurturing a lifelong passion for discovery. Our academic journey, from the playful beginnings in kindergarten to the robust challenges of Class X, is designed to empower every student with the skills and confidence to excel.
         </p>
       </div>
 
       <div className="features">
+        <h3 className="heading">Our Six Pillars</h3>
         {cards.map((card, index) => {
           return(
             <div className="feature" key={index}>

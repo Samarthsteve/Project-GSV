@@ -26,7 +26,7 @@ function Gallery() {
       <Hero heroTitle={loaderData.hero.title} heroImg={loaderData.hero.img} />
       <h3 className="heading">Preword</h3>
       <p className="description">
-        Explore the vibrant tapestry of our school community through our gallery. From memorable alumni gatherings anddynamic campus life to exciting events and adventurous trips, each image captures the essence of our school's spirit and legacy. Join us in celebrating the milestones, achievements, and experiences that have shaped our journey over the past 20 years. Dive into the memories and be inspired by the connections that make our school a thriving hub of learning and growth.
+        Explore the vibrant tapestry of our school community through our gallery. From memorable alumni gatherings and dynamic campus life to exciting events and adventurous trips, each image captures the essence of our school's spirit and legacy. Join us in celebrating the milestones, achievements, and experiences that have shaped our journey over the past 20 years. Dive into the memories and be inspired by the connections that make our school a thriving hub of learning and growth.
       </p>
       <section className="gallery-cards">
 

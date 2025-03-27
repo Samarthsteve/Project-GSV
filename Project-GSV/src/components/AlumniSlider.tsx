@@ -38,6 +38,8 @@ function AlumniSlider({
         <li></li>
         <li></li>
         <li></li>
+        <li></li>
+        <li></li>
       </ul>
     </div>
     <Link to="/gallery"><button className="button-85" role="button">View more</button></Link>
