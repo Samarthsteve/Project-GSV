@@ -4,9 +4,9 @@ import {
 } from 'react';
 import {
   Outlet,
-  useLocation,
-  ScrollRestoration
+  useLocation
 } from 'react-router-dom';
+import ScrollRestoration from './scripts/ScrollRestoration';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import "./App.css"
@@ -58,10 +58,10 @@ function App() {
 
   return (
     <div>
+      <ScrollRestoration />
       <Navbar />
       <Outlet />
       <Footer borderRadius={ footerBorderRadius } margin={ footerMargin } footerLine={ footerLine } />
-      <ScrollRestoration />
     </div>
   );
 }

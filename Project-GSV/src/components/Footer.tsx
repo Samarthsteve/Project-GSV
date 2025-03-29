@@ -83,7 +83,7 @@ export default function Footer({
     Copyright &copy; 2024 Gnyana Sudha Vidyalaya
   </p>
   <p className="copyright dev">
-    Developed by <a>Samarth Kotian</a>
+    Developed by <a href="https://github.com/Samarthsteve">Samarth Kotian</a>
   </p>
 </footer>
 );

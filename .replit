@@ -1,4 +1,4 @@
-modules = ["nodejs-20"]
+modules = ["nodejs-20", "web"]
 
 [[ports]]
 localPort = 5000
@@ -8,3 +8,6 @@ externalPort = 5000
 localPort = 5173
 externalPort = 80
 exposeLocalhost = true
+
+[nix]
+channel = "stable-24_05"
